@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: var(--Dark-Blue) url(/images/bg-mobile.png) no-repeat center ;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+
+}
+.principal{  
+  
+   
+    color: var(--Pale-Blue);
+    font-weight: 400;
+    padding: .1px;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__options,
+.main__progress-conteiner{
+    border-radius: 10px;
+    width: 90%;
+    max-width: 373px;
+    min-width: 239px;
+    background-color:var(--Dark-Blue);
+    padding: 40px;
+   
+}
+.main__options{
+    
+    margin: 0px auto 15px;
+    border-top-right-radius: 80px;
+}
+
+.main__fylo-tittle{
+    margin-bottom: 30px;
+   
+}
+.main__opitons-container{
+    width: 80%;
+    max-width: 234px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.option__container{
+    
+ 
+    background-color: var(--Very-Dark-Blue);
+    width: 55px;
+    height: 55px;
+    margin-left:2px ;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img{
+    display: block;
+    width: 25px;
+}
+
+
+.main__progress-conteiner{
+    width: 90%;
+    margin: 0 auto ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.main__subtittle{
+    
+    
+    text-align: center;
+    margin-bottom: 12px;
+    
+   
+}
+.subtittle{
+    
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.main__used-storage{
+    font-weight: 700;
+}
+.loading__bar,
+.loading__bar::after{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 30px;
+    margin-bottom: 10px;
+  
+    
+}
+.loading__bar{
+    outline: 3px solid var(--Very-Dark-Blue);
+
+}
+.loading__bar::before{
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: aliceblue;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 100;
+    left: 75%;
+    right: 25%;
+    bottom: 1px;
+
+}
+
+.loading__bar::after{
+    content: "";
+    width: 80.15%;
+    height: 15px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    position: absolute;
+
+    
+}
+
+
+
+
+.number__values{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.value{
+   
+    font-weight: 700;
+   
+}
+
+
+.free-storage{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    position: absolute;
+    bottom: -36px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.free-quantity{
+    font-size:45px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.free-quantity-text{
+    font-size:14px ;
+    color: var(--Grayish-Blue);
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.loading__conteiner{
+   
+    width: 100%;
+}
+
+
+
+@media (min-width:750px){
+
+    .main{
+        background: var(--Dark-Blue) url(/images/bg-desktop.png) no-repeat center ;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+
+    
+
+    .principal{
+        
+        width: 98%;
+        max-width: 1101.52px;
+        height: min-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0 auto;
+       
+    }
+
+    .main__options{
+    
+        margin: 0px auto ;
+        margin-right: 10px;
+        
+    }
+
+    .main__progress-conteiner{
+        border-radius: 10px;
+        width: 90%;
+        max-width: 700px;
+        min-width: 239px;
+        background-color:var(--Dark-Blue);
+        padding: 40px;
+       
+    }
+    .loading__bar::before{
+        left: 77.4%;
+    }
+    
+    .main__subtittle{
+        text-align: start;
+    }
+
+    .subtittle{
+        font-size: 16px;
+    }
+    
+    .free-storage{
+        bottom: 136px;
+        right: 45px;
+    }
+    .free-storage::after{
+        content: "";
+        position: absolute;
+        border: 20px solid aliceblue;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid transparent;
+        bottom: -20px;
+        right: 0;
+    }
+
+
+
+ 
+  
+
+
+}
+
+
+
+
+
+
